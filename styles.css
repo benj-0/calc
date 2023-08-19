@@ -1,0 +1,44 @@
+body {
+    background-color: #333;
+    background-image: url(bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    border: 1px whitesmoke solid;
+    border-radius: 5px;
+    background-color: #33333388;
+    color: whitesmoke;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.grid {
+    display: flex;
+    width: 672px;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+    border: 5px #3b1a2b93 solid;
+
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    border: 1px #3333338a solid;
+    background-color: rgb(204, 177, 195);
+    
+}
