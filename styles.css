@@ -1,5 +1,5 @@
 body {
-    background-color: #333;
+    background-color: #333333ad;
     background-image: url(bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,35 +10,94 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
+}
+
+*{
+    border-radius: 40px;
+    gap: 2px;;
 }
 
 button {
     padding: 10px;
     border: 1px whitesmoke solid;
     border-radius: 5px;
-    background-color: #33333388;
+    background-color: #;
     color: whitesmoke;
-    font-family: inherit;
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
 }
 
-.grid {
+.calcbody {
     display: flex;
-    width: 672px;
+    width: 550px;
+    height: 800px;
     flex-wrap: wrap;
-    /* background-color: blue; */
-    border: 5px #3b1a2b93 solid;
-
+    flex-direction: column;
+    background-image: linear-gradient(#3c656f93, #6d9eaa2d);
+    /* #3c656f70; */ 
+    border: 5px #3b1a2b52 solid;
+    justify-content: center;
+    align-items: center;
 }
 
-.square {
-    width: 40px;
-    height: 40px;
-    border: 1px #3333338a solid;
-    background-color: rgb(204, 177, 195);
-    
+.screen {
+    display: flex;
+    width: 490px;
+    height: 100px;
+    border: 1px #33333375 solid;
+    align-items: center;
+    text-align: end;
+    background-image: linear-gradient(to right, #ffffff29, #ffffff12);
+    margin-bottom: 70px;
+}
+
+.screen p {
+    color: whitesmoke;
+    font-size: 40px;
+    padding-right: 40px;
+    flex: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers div,
+.operators div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 30px;
+    gap: 1px;
+    border: 1px #33333375 solid;
+    font-size: 60px;
+    background-color: #ffffff0c;
+    margin: 2px;
+}
+
+.numbers{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.operators {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#plusminus,
+#period {
+    font-size: 30px;
 }
