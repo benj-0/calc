@@ -30,7 +30,7 @@ function updateScreen(item) {
     else if (screentext.innerHTML == "null") screentext.innerHTML = 0;
     else if (checkOperator(screentext.innerHTML) && checkOperator(item)) return;
     else if (checkOperator(item) && !checkOperator(screentext.innerHTML)) screentext.innerHTML += ` ${item} `;
-    else if (item != 0 && screentext.innerHTML == 0) screentext.innerHTML = item;
+    else if (item != 0 && screentext.innerHTML == 0) screentext.innerHTML = item; 
     else if (item != 0 && screentext.innerHTML != 0) screentext.innerHTML += item;
 }
 
