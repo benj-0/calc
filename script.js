@@ -32,15 +32,17 @@ function countPeriods(string) {
 
 function updateScreen(item) {
     console.log(item);
-    if (item == 0 && screentext.innerHTML == 0) screentext.innerHTML = item;
-    else if (screentext.innerHTML == "Infinity") screentext.innerHTML = 0;
-    else if (screentext.innerHTML == "NaN") screentext.innerHTML = 0;
-    else if (screentext.innerHTML == "undefined") screentext.innerHTML = 0;
-    else if (screentext.innerHTML == "null") screentext.innerHTML = 0;
-    else if (stringHasOperatorAndSpace(screentext.innerHTML) && checkOperator(item)) return;
-    else if (checkOperator(item) && !stringHasOperatorAndSpace(screentext.innerHTML)) screentext.innerHTML += ` ${item} `;
-    else if (item != 0 && screentext.innerHTML == 0) screentext.innerHTML = item;
-    else if (item != 0 && screentext.innerHTML != 0) screentext.innerHTML += item;
+    if (screentext.innerHTML === "Infinity" || screentext.innerHTML === "NaN" || screentext.innerHTML === "undefined" || screentext.innerHTML === "null") {
+        screentext.innerHTML = 0;
+    } else if (stringHasOperatorAndSpace(screentext.innerHTML) && checkOperator(item)) {
+        return;
+    } else if (checkOperator(item) && !stringHasOperatorAndSpace(screentext.innerHTML)) {
+        screentext.innerHTML += ` ${item} `;
+    } else if (item !== "0" && screentext.innerHTML === "0") {
+        screentext.innerHTML = item;
+    } else {
+        screentext.innerHTML += item;
+    }
 }
 
 function compute(operation) {
