@@ -8,31 +8,40 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
         <script src="script.js" defer></script>
-        <title>Sketch</title>
+        <title>Calc</title>
     </head>
     <body>
         <div class="calcbody">
-            <div class="screen"><p>0</p></div>
+            <div class="screen">
+                <p id="screentext">0</p>
+            </div>
             <div class="buttons">
-                <div class="numbers">
-                    <div class="num1">1</div>
-                    <div class="num2">2</div>
-                    <div class="num3">3</div>
-                    <div class="num4">4</div>
-                    <div class="num5">5</div>
-                    <div class="num6">6</div>
-                    <div class="num7">7</div>
-                    <div class="num8">8</div>
-                    <div class="num9">9</div>
-                    <div class="plusminus" id="plusminus">+/-</div>
-                    <div class="num0">0</div>
-                    <div class="period" id="period">.</div>
+                <div class="delclr">
+                    <button id="del">del</button>
+                    <button id="clr">clr</button>
                 </div>
-                <div class="operators">
-                    <div class="opt+">+</div>
-                    <div class="opt-">-</div>
-                    <div class="opt*">*</div>
-                    <div class="opt/">/</div>
+                <div class="operation">
+                    <div class="numbers">
+                        <button class="btn" class="numbtn" id="num7">7</button>
+                        <button class="btn" class="numbtn" id="num8">8</button>
+                        <button class="btn" class="numbtn" id="num9">9</button>
+                        <button class="btn" class="numbtn" id="num4">4</button>
+                        <button class="btn" class="numbtn" id="num5">5</button>
+                        <button class="btn" class="numbtn" id="num6">6</button>
+                        <button class="btn" class="numbtn" id="num1">1</button>
+                        <button class="btn" class="numbtn" id="num2">2</button>
+                        <button class="btn" class="numbtn" id="num3">3</button>
+                        <button class="btn" class="numbtn" id="period" id="period">.</button>
+                        <button class="btn" class="numbtn" id="num0">0</button>
+                        <button id="eq">=</button>
+                    </div>
+
+                    <div class="operators">
+                        <button class="btn" class="operatorbtn" id="opt+">+</button>
+                        <button class="btn" class="operatorbtn" id="opt-">-</button>
+                        <button class="btn" class="operatorbtn" id="opt*">*</button>
+                        <button class="btn" class="operatorbtn" id="opt/">/</button>
+                    </div>
                 </div>
             </div>
         </div>
