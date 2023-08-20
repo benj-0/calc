@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1000px) {
+    .calcbody {
+        transform: scale(0.7);
+    }
+}
+
 body {
     background-color: #62414e;
     background-image: url(bg.svg);
@@ -28,7 +34,6 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     background-image: linear-gradient(#3c656f93, #6d9eaa2d);
-    /* #3c656f70; */
     border: 5px #3b1a2b52 solid;
     justify-content: center;
     align-items: center;
