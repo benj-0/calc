@@ -11,6 +11,15 @@ function checkOperator(string) {
     return false;
 }
 
+function stringHasOperatorAndSpace(string) {
+    if (string.includes("+") || string.includes("-") || string.includes("*") || string.includes("/") || string.includes("%")) {
+        if (string.includes(" ")) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function countPeriods(string) {
     let count = 0;
     if (string) {
@@ -28,9 +37,9 @@ function updateScreen(item) {
     else if (screentext.innerHTML == "NaN") screentext.innerHTML = 0;
     else if (screentext.innerHTML == "undefined") screentext.innerHTML = 0;
     else if (screentext.innerHTML == "null") screentext.innerHTML = 0;
-    else if (checkOperator(screentext.innerHTML) && checkOperator(item)) return;
-    else if (checkOperator(item) && !checkOperator(screentext.innerHTML)) screentext.innerHTML += ` ${item} `;
-    else if (item != 0 && screentext.innerHTML == 0) screentext.innerHTML = item; 
+    else if (stringHasOperatorAndSpace(screentext.innerHTML) && checkOperator(item)) return;
+    else if (checkOperator(item) && !stringHasOperatorAndSpace(screentext.innerHTML)) screentext.innerHTML += ` ${item} `;
+    else if (item != 0 && screentext.innerHTML == 0) screentext.innerHTML = item;
     else if (item != 0 && screentext.innerHTML != 0) screentext.innerHTML += item;
 }
 
